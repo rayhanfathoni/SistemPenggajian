@@ -89,7 +89,7 @@
             <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard</a></li>
           </ul>
         </li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
             <span>Karyawan</span>
@@ -102,7 +102,7 @@
             <li><a href="karyawan.html"><i class="fa fa-circle-o"></i> Data Karyawan</a></li>
             </ul>
         </li>
-        <li class="treeview">
+        <li class="active treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
             <span>Sistem Gaji</span>
@@ -131,7 +131,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Karyawan</a></li>
-        <li class="active">Data Karyawan</li>
+        <li class="active">Gaji Karyawan</li>
       </ol>
     </section>
 
@@ -140,41 +140,91 @@
     <section class="content">
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Data Karyawan</h3>
+          <h3 class="box-title">Data Gaji</h3>
         </div>
-      
+        <div class="box-body">
+          <div class="row">
+            <div class="col-xs-2">
+              <input type="text" class="form-control" placeholder="Bulan...">
+            </div>
+            <div class="col-xs-2">
+              <input type="text" class="form-control" placeholder="Tahun...">
+            </div>
+            <div class="col-xs-3">
+              <input type="text" class="form-control" placeholder="Pencarian...">
+            </div>
+          </div>
+        </div>
+        <!--Button Input Gaji-->
+        <div class="box-footer">
+           <button type="submit" class="btn btn-primary" data-toggle="modal"  data-target="#modal-default" ><b>+</b> Input Gaji</button>
+         </div>  
 
+         <div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Input Gaji Karyawan</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ID Karyawan</label>
+                  <input type="input"  class="form-control" id="idkaryawan" name="idkaryawan">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Tanggal Gaji</label>
+                  <input type="date"  class="form-control" id="tglgaji" name="tglgaji">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Gaji Bersih</label>
+                  <input type="Input"  class="form-control" id="gajibersih" name="gajibersih">
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
-
+      </div>
       
         <!-- data-table -->
         <div class="box-body">
           <table id="example1" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>ID Karyawan</th>
-              <th>Nama Karyawan</th>
-              <th>Alamat</th>
-              <th>Agama</th>
-              <th>Jabatan</th>
+              <th>ID Gaji</th>
+              <th>Tanggal Gaji</th>
+              <th>Gaji Bersih</th>
               <th> Action </th>
             </tr>
             </thead>
             <tbody>
             <tr>
               <td>1</td>
-              <td>Sutrisno</td>
-              <td>Surabaya</td>
-              <td>Islam</td>
-              <th>Manager</th>
+              <td>03/12/2020</td>
+              <td>3600000</td>
               <td>
- 
+                <a class="btn btn-social-icon" title="potongan" ><i class="fa fa-scissors"data-toggle="modal" href="potongan.html"></i></a>
                 <a class="btn btn-social-icon" title="edit" ><i class="fa fa-edit"data-toggle="modal" href="#"></i></a>
                 <a class="btn btn-social-icon" title="hapus" ><i class="fa fa-bitbucket"data-toggle="modal" href="#"></i></a>
               </td>
             </tr>
-
-
+            <td>2</td>
+            <td>04/12/2020</td>
+            <td>4000000</td>
+            <td>
+              <a class="btn btn-social-icon" title="potongan" ><i class="fa fa-scissors"data-toggle="modal" href="potongan.html"></i></a>
+              <a class="btn btn-social-icon" title="edit" ><i class="fa fa-edit"data-toggle="modal" href="#"></i></a>
+              <a class="btn btn-social-icon" title="hapus" ><i class="fa fa-bitbucket"data-toggle="modal" href="#"></i></a>
+            </td>
+          </tr>
   
             </tfoot>
           </table>
