@@ -89,7 +89,7 @@
             <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard</a></li>
           </ul>
         </li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
             <span>Karyawan</span>
@@ -102,7 +102,7 @@
             <li><a href="karyawan.html"><i class="fa fa-circle-o"></i> Data Karyawan</a></li>
             </ul>
         </li>
-        <li class="treeview">
+        <li class="active treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
             <span>Sistem Gaji</span>
@@ -131,7 +131,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Karyawan</a></li>
-        <li class="active">Data Karyawan</li>
+        <li class="active">Potongan</li>
       </ol>
     </section>
 
@@ -140,33 +140,64 @@
     <section class="content">
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Data Karyawan</h3>
+          <h3 class="box-title">Potongan Gaji</h3>
         </div>
       
+        <!--Button Input Gaji-->
+        <div class="box-footer">
+           <button type="submit" class="btn btn-primary" data-toggle="modal"  data-target="#modal-default" ><b>-</b> Potong Gaji</button>
+         </div>  
 
+         <div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Input Gaji Karyawan</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Kode Potongan</label>
+                  <input type="input"  class="form-control" id="kodepotongan" name="kodepotongan">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Potongan</label>
+                  <input type="input"  class="form-control" id="namapotongan" name="namapotongan">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Jumlah Potongan</label>
+                  <input type="input"  class="form-control" id="jumlahpotongan" name="jumlahpotongan">
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
-
+      </div>
       
         <!-- data-table -->
         <div class="box-body">
           <table id="example1" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>ID Karyawan</th>
-              <th>Nama Karyawan</th>
-              <th>Alamat</th>
-              <th>Agama</th>
-              <th>Jabatan</th>
+              <th>Kode Potongan</th>
+              <th>Nama Potongan</th>
+              <th>Jumlah Potongan</th>
               <th> Action </th>
             </tr>
             </thead>
             <tbody>
             <tr>
               <td>1</td>
-              <td>Sutrisno</td>
-              <td>Surabaya</td>
-              <td>Islam</td>
-              <th>Manager</th>
+              <td>Potongan Kehadiran</td>
+              <td>50000</td>
               <td>
  
                 <a class="btn btn-social-icon" title="edit" ><i class="fa fa-edit"data-toggle="modal" href="#"></i></a>
